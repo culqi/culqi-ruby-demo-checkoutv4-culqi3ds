@@ -16,12 +16,55 @@ La demo integra Culqi Ruby, Checkout V4 , Culqi 3DS y es compatible con la v2.0 
 
 * Para encriptar el payload debes generar un id y llave RSA  ingresando a CulqiPanel > Desarrollo  > RSA Keys.
 
+## Instalación
+
+Ejecuta los siguientes comandos:
+
+```bash
+gem install bundler
+bundle install
+```
+
 ## Configuración backend
 
+En el archivo **server.rb** coloca tus llaves:
+
+```ruby
+$encrypt = '0'
+Culqi.public_key = 'INSERTE_SU_LLAVE_PUBLICA'
+Culqi.secret_key = 'INSERTE_SU_LLAVE_PRIVADA'
+
+$rsa_key = 'INSERTE_SU_LLAVE_RSA'
+$rsa_id = "INSERTE_SU_RSA_ID"
+
+```
+
+
 ## Configuración frontend
+Para configurar los datos del cargo, pk del comercio y datos del cliente se tiene que modificar en el archivo `static/js/config/index.js`.
+
+```js
+	Culqi.publicKey = config.PUBLIC_KEY;
+	
+	Culqi.settings({
+	  title: "Culqi 3DS TEST",
+	  order: jsonParams.orderId,
+	  currency: config.CURRENCY,
+	  description: "Polo/remera Culqi lover",
+	  amount: config.TOTAL_AMOUNT,
+	  xculqirsaid: config.RSA_ID,
+	  rsapublickey: config.RSA_PUBLIC_KEY,
+	  excludencryptoperations: [''],
+	});
+
+```
 
 ## Inicializar la demo
+Ejecutar el siguiente comando:
 
+```bash
+ruby server.rb
+```
 
 ## Probar la demo
 
