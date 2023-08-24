@@ -31,32 +31,29 @@ En el archivo **server.rb** coloca tus llaves:
 
 ```ruby
 $encrypt = '0'
-Culqi.public_key = 'INSERTE_SU_LLAVE_PUBLICA'
-Culqi.secret_key = 'INSERTE_SU_LLAVE_PRIVADA'
+Culqi.public_key = 'Llave pública del comercio (INSERTE_SU_LLAVE_PUBLICA)'
+Culqi.secret_key = 'Llave secreta del comercio (INSERTE_SU_LLAVE_PRIVADA)'
 
-$rsa_key = 'INSERTE_SU_LLAVE_RSA'
-$rsa_id = "INSERTE_SU_RSA_ID"
-
+$rsa_id = "Id de la llave RSA"
+$rsa_key = 'Llave pública RSA que sirve para encriptar el payload de los servicios'
 ```
 
 
 ## Configuración frontend
-Para configurar los datos del cargo, pk del comercio y datos del cliente se tiene que modificar en el archivo `static/js/config/index.js`.
+Para configurar los datos del cargo, pk del comercio, rsa_id y rsa_public_key y datos del cliente se tiene que modificar en el archivo `static/js/config/index.js`.
 
 ```js
-	Culqi.publicKey = config.PUBLIC_KEY;
-	
-	Culqi.settings({
-	  title: "Culqi 3DS TEST",
-	  order: jsonParams.orderId,
-	  currency: config.CURRENCY,
-	  description: "Polo/remera Culqi lover",
-	  amount: config.TOTAL_AMOUNT,
-	  xculqirsaid: config.RSA_ID,
-	  rsapublickey: config.RSA_PUBLIC_KEY,
-	  excludencryptoperations: [''],
-	});
+Culqi.publicKey = config.PUBLIC_KEY;
 
+Culqi.settings({
+	title: "Culqi 3DS TEST",
+	order: jsonParams.orderId,
+	currency: config.CURRENCY,
+	description: "Polo/remera Culqi lover",
+	amount: config.TOTAL_AMOUNT,
+	xculqirsaid: config.RSA_ID,
+	rsapublickey: config.RSA_PUBLIC_KEY
+});
 ```
 
 ## Inicializar la demo
