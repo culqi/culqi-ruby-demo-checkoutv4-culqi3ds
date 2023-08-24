@@ -30,8 +30,7 @@ Para poder visualizar el frontend de la demo ingresar a la siguiente URL:
 - Para probar cargos: http://localhost:8080
 - Para probar creación de cards: http://localhost:8080/index_card.html
 
-## Documentación de servicios
+## Documentación
 
-Para poder visualizar la documentación de los servicios/modelos ingresar a la siguiente URL:
-
-- https://apidocs.culqi.com/
+- [Referencia de Documentación](https://docs.culqi.com/)
+- [Referencia de API](https://apidocs.culqi.com/)
