@@ -40,7 +40,7 @@ $rsa_key = 'Llave pública RSA que sirve para encriptar el payload de los servic
 
 
 ## Configuración frontend
-Para configurar los datos del cargo, pk del comercio, rsa_id y rsa_public_key y datos del cliente se tiene que modificar en el archivo `static/js/config/index.js`.
+Para configurar los datos del cargo, pk del comercio, rsa_id, rsa_public_key y datos del cliente se tiene que modificar en el archivo `static/js/config/index.js`.
 
 ```js
 Culqi.publicKey = config.PUBLIC_KEY;
