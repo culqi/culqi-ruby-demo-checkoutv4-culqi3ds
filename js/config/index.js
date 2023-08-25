@@ -4,7 +4,7 @@ export default Object.freeze({
   CURRENCY: "PEN",
   PUBLIC_KEY: "INSERTE_SU_LLAVE_PUBLICA",
   COUNTRY_CODE: "PE",
-  RSA_ID: "INSERTE_SU_RSA_ID",
+  RSA_ID: 'INSERTE_SU_RSA_ID',
   RSA_PUBLIC_KEY: 'INSERTE_SU_LLAVE_RSA',
   URL_BASE: "http://localhost:8000",
 });
