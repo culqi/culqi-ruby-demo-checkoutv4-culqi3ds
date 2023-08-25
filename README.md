@@ -40,19 +40,16 @@ $rsa_key = 'Llave pública RSA que sirve para encriptar el payload de los servic
 
 
 ## Configuración frontend
-Para configurar los datos del cargo, pk del comercio, rsa_id, rsa_public_key y datos del cliente se tiene que modificar en el archivo `static/js/config/index.js`.
+Para configurar los datos del cargo, pk del comercio, rsa_id, rsa_public_key y datos del cliente se tiene que modificar en el archivo `js/config/index.js`.
 
 ```js
-Culqi.publicKey = config.PUBLIC_KEY;
-
-Culqi.settings({
-	title: "Culqi 3DS TEST",
-	order: jsonParams.orderId,
-	currency: config.CURRENCY,
-	description: "Polo/remera Culqi lover",
-	amount: config.TOTAL_AMOUNT,
-	xculqirsaid: config.RSA_ID,
-	rsapublickey: config.RSA_PUBLIC_KEY
+export default Object.freeze({
+  TOTAL_AMOUNT: 600,
+  CURRENCY: "PEN",
+  PUBLIC_KEY: "Llave pública del comercio (pk_test_xxxxxxxxx)",
+  COUNTRY_CODE: "PE",
+  RSA_ID: "Id de la llave RSA",
+  RSA_PUBLIC_KEY: 'Llave pública RSA que sirve para encriptar el payload de los servicios',
 });
 ```
 

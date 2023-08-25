@@ -9,10 +9,10 @@ const culqiConfig = (jsonParams) => {
 	  order: jsonParams.orderId,
 	  currency: config.CURRENCY,
 	  description: "Polo/remera Culqi lover",
-	  amount: config.TOTAL_AMOUNT,
+	  amount: jsonParams.amount,
 	  xculqirsaid: config.RSA_ID,
 	  rsapublickey: config.RSA_PUBLIC_KEY,
-	  excludencryptoperations: [''],
+	  //excludencryptoperations: [''],
 	});
 	
 	Culqi.options({
@@ -32,7 +32,7 @@ const culqiConfig = (jsonParams) => {
 	    buttonBackground: "", // hexadecimal
 	    menuColor: "", // hexadecimal
 	    linksColor: "", // hexadecimal
-	    buttonText: "", // texto que tomará el botón
+	    buttonText: jsonParams.buttonTex, // texto que tomará el botón
 	    buttonTextColor: "", // hexadecimal
 	    priceColor: "", // hexadecimal
 	  },
