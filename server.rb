@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'webrick'
-require 'culqi-ruby-oficial'
+require 'culqi-ruby'
 
 $encrypt = '0'
 Culqi.public_key = 'pk_test_90667d0a57d45c48'
