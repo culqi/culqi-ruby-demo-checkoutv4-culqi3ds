@@ -64,8 +64,8 @@ ruby server.rb
 
 Para poder visualizar el frontend de la demo ingresar a la siguiente URL:
 
-- Para probar cargos: http://localhost:8080
-- Para probar creación de cards: http://localhost:8080/index_card.html
+- Para probar cargos: http://localhost:8000
+- Para probar creación de cards: http://localhost:8000/index_card.html
 
 ## Documentación
 
