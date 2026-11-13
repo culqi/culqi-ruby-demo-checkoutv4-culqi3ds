@@ -31,13 +31,14 @@ En el archivo **server.rb** coloca tus llaves:
 
 ```ruby
 $encrypt = '0'
-Culqi.public_key = 'Llave pública del comercio (INSERTE_SU_LLAVE_PUBLICA)'
-Culqi.secret_key = 'Llave secreta del comercio (INSERTE_SU_LLAVE_PRIVADA)'
+Culqi.public_key = 'INSERTE_SU_LLAVE_PUBLICA'
+Culqi.secret_key = 'INSERTE_SU_LLAVE_PRIVADA'
 
-$rsa_id = "Id de la llave RSA"
-$rsa_key = 'Llave pública RSA que sirve para encriptar el payload de los servicios'
+$rsa_id = 'INSERTE_SU_RSA_ID'
+$rsa_key = 'INSERTE_SU_LLAVE_RSA'
 ```
 
+Reemplaza los placeholders localmente por tus propias llaves de prueba (`pk_test_` y `sk_test_`) y, si usas encriptación, por tu ID y llave pública RSA. No hagas commit de credenciales. Mantén la llave privada exclusivamente en el backend. La demo hace llamadas reales a Culqi.
 
 ## Configuración frontend
 Para configurar los datos del cargo, pk del comercio, rsa_id, rsa_public_key y datos del cliente se tiene que modificar en el archivo `js/config/index.js`.
@@ -46,10 +47,10 @@ Para configurar los datos del cargo, pk del comercio, rsa_id, rsa_public_key y d
 export default Object.freeze({
   TOTAL_AMOUNT: 600,
   CURRENCY: "PEN",
-  PUBLIC_KEY: "Llave pública del comercio (INSERTE_SU_LLAVE_PUBLICA)",
+  PUBLIC_KEY: "INSERTE_SU_LLAVE_PUBLICA",
   COUNTRY_CODE: "PE",
-  RSA_ID: "Id de la llave RSA",
-  RSA_PUBLIC_KEY: 'Llave pública RSA que sirve para encriptar el payload de los servicios',
+  RSA_ID: "INSERTE_SU_RSA_ID",
+  RSA_PUBLIC_KEY: "INSERTE_SU_LLAVE_RSA",
 });
 ```
 
